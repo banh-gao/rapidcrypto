@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OneWay Crypto</string>
+    <string name="encryption_started">File encryption running</string>
+    <string name="decryption_started">File decryption running</string>
+    <string name="progress_status">Encryption of %1$s</string>
+    <string name="decryption_progress_status">Decryption of %1$s</string>
+    <string name="encryption_completed">Encryption completed</string>
+    <plurals name="encryption_completed_details">
+		<item quantity="one">1 file encrypted</item>
+		<item quantity="other">%1$d files encrypted</item>
+	</plurals>
+	    <plurals name="decryption_completed_details">
+		<item quantity="one">1 file decrypted</item>
+		<item quantity="other">%1$d files decrypted</item>
+	</plurals>
+    <string name="cancel">Cancel</string>
+    <string name="unlock_info">Insert the password in order to decrypt the file</string>
+    <string name="unlock_title">Decrypt file</string>
+    <string name="unlock">Decrypt</string>
+    <string name="unlock_error">Invalid decryption password</string>
+    <string name="password_hint">Decryption password</string>
+    <string name="unlock_file_error">Cannot find the private key</string>
+    <string name="decrypting_message">Decryption of file %1$s</string>
+    <string name="decryption_error_details">Decryption of file %1$s failed</string>
+    <string name="decryption_error">Decryption failed</string>
+    <string name="decrypting_title">File decryption</string>
+    <string name="decryption_completed">File %1$s decrypted</string>
+    <string name="prefs_delete_plain">Destroy original file</string>
+    <string name="prefs_delete_plain_details">Delete the original plain file after the encryption succeed</string>
+    <string name="prefs_delete_encrypted">Delete encrypted file</string>
+    <string name="prefs_delete_encrypted_details">Delete the encryted file after the decryption succeed</string>
+    <string name="prefs_regenerate_keys">Regenerate crypto keys</string>
+    <string name="prefs_regenerate">Regenerate</string>
+    <string name="prefs_regenerate_completed">New keypair generated</string>
+    <string name="prefs_regenerate_password">Insert the new password</string>
+    <string name="prefs_regenerate_password_error">The password should be at least 8 characters long</string>
+    <string name="prefs_regenerate_password_confirm">Rewrite the new password</string>
+    <string name="prefs_regenerate_password_confirm_error">The two passwords doesn\'t match</string>
+    <string name="prefs_generating">Generating RSA 2048 bit key pair</string>
+    <string name="prefs_regenerate_keys_details">Regenerate the keys to encrypt and decrypt the data. The old encrypted data cannot be recovered anymore.</string>
+    <string name="prefs_regenerate_keys_alert">Warning! By regenerating the encryption keys all data encrypted with the old key can never be recovered, even using the old password. Do you really want to regenerate the encryption keys?</string>
+</resources>

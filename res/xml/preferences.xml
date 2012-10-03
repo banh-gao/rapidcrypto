@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference android:title="@string/prefs_delete_plain" android:summary="@string/prefs_delete_plain_details" android:key="deletePlain"></CheckBoxPreference>
+    <CheckBoxPreference android:title="@string/prefs_delete_encrypted" android:summary="@string/prefs_delete_encrypted_details" android:key="deleteEncrypted"></CheckBoxPreference>
+    <Preference android:key="regenerateKeys" android:summary="@string/prefs_regenerate_keys_details" android:title="@string/prefs_regenerate_keys"></Preference>
+</PreferenceScreen>
