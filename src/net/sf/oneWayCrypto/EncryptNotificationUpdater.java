@@ -54,7 +54,7 @@ public class EncryptNotificationUpdater {
 	}
 
 	private Notification buildNotification(Context context) {
-		NotificationCompat.Builder b = new NotificationCompat.Builder(context);
+		Notification.Builder b = new Notification.Builder(context);
 		b.setSmallIcon(android.R.drawable.ic_lock_lock);
 		b.setContentIntent(resultPendingIntent);
 		b.setContentTitle(title);
@@ -69,7 +69,7 @@ public class EncryptNotificationUpdater {
 			return b.build();
 		}
 
-		NotificationCompat.InboxStyle inboxStyle = new NotificationCompat.InboxStyle();
+		Notification.InboxStyle inboxStyle = new Notification.InboxStyle();
 		inboxStyle.setBigContentTitle(bigTitle);
 		int completed = 0;
 		for (Entry<Uri, Integer> e : progresses.entrySet()) {

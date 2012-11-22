@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">OneWay Crypto</string>
+    <string name="app_name">One Way Crypto</string>
+    <string name="menu_settings">Settings</string>
+    <string name="tab_encryption">Encryption</string>
+    <string name="tab_decryption">Decryption</string>
     <string name="notification_title_encryption">File encryption</string>
     <string name="notification_title_decryption">File decryption</string>
+
     <plurals name="notification_text">
         <item quantity="one">%1$s task completed.</item>
         <item quantity="other">%1$s tasks completed.</item>
     </plurals>
+
     <string name="notification_details_title">Operation details:</string>
     <string name="notification_details_text">%1$s: %2$d%%</string>
     <string name="notification_details_title_encryption">Encryption status:</string>
@@ -38,4 +43,5 @@
     <string name="prefs_generating">Generating RSA 2048 bit key pair</string>
     <string name="prefs_regenerate_keys_details">Regenerate the keys to encrypt and decrypt the data. The old encrypted data cannot be recovered anymore.</string>
     <string name="prefs_regenerate_keys_alert">Warning! By regenerating the encryption keys all data encrypted with the old key can never be recovered, even using the old password. Do you really want to regenerate the encryption keys?</string>
+
 </resources>
