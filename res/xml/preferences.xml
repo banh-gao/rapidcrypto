@@ -4,4 +4,5 @@
     <CheckBoxPreference android:title="@string/prefs_delete_plain" android:summary="@string/prefs_delete_plain_details" android:key="deletePlain"></CheckBoxPreference>
     <CheckBoxPreference android:title="@string/prefs_delete_encrypted" android:summary="@string/prefs_delete_encrypted_details" android:key="deleteEncrypted"></CheckBoxPreference>
     <Preference android:key="regenerateKeys" android:summary="@string/prefs_regenerate_keys_details" android:title="@string/prefs_regenerate_keys"></Preference>
+    <ListPreference android:key="keyStrength" android:entryValues="@array/key_strength"/>
 </PreferenceScreen>

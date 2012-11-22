@@ -8,7 +8,6 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
-
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -23,7 +22,6 @@ public class DirListener extends BroadcastReceiver {
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
-		
 		if (intent.getAction().equals(ACTION_REFRESH_DIRS) || intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
 			Log.d("ONE_WAY_CRYPTO", watchers.toString());
 			refreshDirs(context);
@@ -42,8 +40,7 @@ public class DirListener extends BroadcastReceiver {
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(context.openFileInput(DIR_FILE)));
 
-			for (String line = br.readLine(); line != null; line = br
-					.readLine()) {
+			for (String line = br.readLine(); line != null; line = br.readLine()) {
 
 				File directory = new File(line);
 				Timer t = new Timer();

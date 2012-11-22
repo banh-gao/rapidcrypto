@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">OneWay Crypto</string>
-    <string name="encryption_started">File encryption running</string>
-    <string name="decryption_started">File decryption running</string>
-    <string name="progress_status">Encryption of %1$s</string>
-    <string name="decryption_progress_status">Decryption of %1$s</string>
-    <string name="encryption_completed">Encryption completed</string>
-    <plurals name="encryption_completed_details">
-		<item quantity="one">1 file encrypted</item>
-		<item quantity="other">%1$d files encrypted</item>
-	</plurals>
-	    <plurals name="decryption_completed_details">
-		<item quantity="one">1 file decrypted</item>
-		<item quantity="other">%1$d files decrypted</item>
-	</plurals>
+    <string name="notification_title_encryption">File encryption</string>
+    <string name="notification_title_decryption">File decryption</string>
+    <plurals name="notification_text">
+        <item quantity="one">%1$s task completed.</item>
+        <item quantity="other">%1$s tasks completed.</item>
+    </plurals>
+    <string name="notification_details_title">Operation details:</string>
+    <string name="notification_details_text">%1$s: %2$d%%</string>
+    <string name="notification_details_title_encryption">Encryption status:</string>
+    <string name="notification_details_title_decryption">Decryption status:</string>
     <string name="cancel">Cancel</string>
     <string name="unlock_info">Insert the password in order to decrypt the file</string>
     <string name="unlock_title">Decrypt file</string>
@@ -33,6 +30,7 @@
     <string name="prefs_regenerate_keys">Regenerate crypto keys</string>
     <string name="prefs_regenerate">Regenerate</string>
     <string name="prefs_regenerate_completed">New keypair generated</string>
+    <string name="prefs_regenerate_failed">Keypair generation failed</string>
     <string name="prefs_regenerate_password">Insert the new password</string>
     <string name="prefs_regenerate_password_error">The password should be at least 8 characters long</string>
     <string name="prefs_regenerate_password_confirm">Rewrite the new password</string>

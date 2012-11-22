@@ -7,20 +7,26 @@ import android.preference.PreferenceManager;
 
 /**
  * Class called when the application start, provide utils for the whole app
- *
+ * 
  */
 public class AppUtils extends Application {
 
-	public static final String TAG = "ONE_WAY_CRYPTO";
-	
+	public static String PACKAGE_NAME;
+
+	public static final String PREFS_KEY_STRENGTH = "key_strength";
+
 	private static Context context;
+
+	private static ContactsCryptoManager contactsCryptoManager;
 
 	@Override
 	public void onCreate() {
-		context = getApplicationContext();
 		super.onCreate();
+		PACKAGE_NAME = getPackageName();
+		context = getApplicationContext();
+		contactsCryptoManager = new ContactsCryptoManager(context);
 	}
-	
+
 	public static SharedPreferences getPrefs() {
 		return PreferenceManager.getDefaultSharedPreferences(getContext());
 	}
@@ -32,5 +38,9 @@ public class AppUtils extends Application {
 	 */
 	public static Context getContext() {
 		return context;
+	}
+
+	public static ContactsCryptoManager getContactsCryptoManager() {
+		return contactsCryptoManager;
 	}
 }

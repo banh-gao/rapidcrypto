@@ -8,58 +8,62 @@
 package net.sf.oneWayCrypto;
 
 public final class R {
+    public static final class array {
+        public static final int key_strength=0x7f050000;
+    }
     public static final class attr {
     }
     public static final class drawable {
         public static final int icon=0x7f020000;
     }
     public static final class id {
-        public static final int password=0x7f070001;
-        public static final int password_confirm=0x7f070002;
-        public static final int textView1=0x7f070000;
-        public static final int unlockPassword=0x7f070003;
+        public static final int password=0x7f080001;
+        public static final int password_confirm=0x7f080002;
+        public static final int textView1=0x7f080000;
+        public static final int unlockPassword=0x7f080003;
     }
     public static final class layout {
         public static final int new_keys_dialog=0x7f030000;
         public static final int password_dialog=0x7f030001;
     }
     public static final class plurals {
-        public static final int decryption_completed_details=0x7f060001;
-        public static final int encryption_completed_details=0x7f060000;
+        public static final int notification_text=0x7f070000;
     }
     public static final class string {
-        public static final int app_name=0x7f050000;
-        public static final int cancel=0x7f050006;
-        public static final int decrypting_message=0x7f05000d;
-        public static final int decrypting_title=0x7f050010;
-        public static final int decryption_completed=0x7f050011;
-        public static final int decryption_error=0x7f05000f;
-        public static final int decryption_error_details=0x7f05000e;
-        public static final int decryption_progress_status=0x7f050004;
-        public static final int decryption_started=0x7f050002;
-        public static final int encryption_completed=0x7f050005;
-        public static final int encryption_started=0x7f050001;
-        public static final int password_hint=0x7f05000b;
-        public static final int prefs_delete_encrypted=0x7f050014;
-        public static final int prefs_delete_encrypted_details=0x7f050015;
-        public static final int prefs_delete_plain=0x7f050012;
-        public static final int prefs_delete_plain_details=0x7f050013;
-        public static final int prefs_generating=0x7f05001d;
-        public static final int prefs_regenerate=0x7f050017;
-        public static final int prefs_regenerate_completed=0x7f050018;
-        public static final int prefs_regenerate_keys=0x7f050016;
-        public static final int prefs_regenerate_keys_alert=0x7f05001f;
-        public static final int prefs_regenerate_keys_details=0x7f05001e;
-        public static final int prefs_regenerate_password=0x7f050019;
-        public static final int prefs_regenerate_password_confirm=0x7f05001b;
-        public static final int prefs_regenerate_password_confirm_error=0x7f05001c;
-        public static final int prefs_regenerate_password_error=0x7f05001a;
-        public static final int progress_status=0x7f050003;
-        public static final int unlock=0x7f050009;
-        public static final int unlock_error=0x7f05000a;
-        public static final int unlock_file_error=0x7f05000c;
-        public static final int unlock_info=0x7f050007;
-        public static final int unlock_title=0x7f050008;
+        public static final int app_name=0x7f060000;
+        public static final int cancel=0x7f060007;
+        public static final int decrypting_message=0x7f06000e;
+        public static final int decrypting_title=0x7f060011;
+        public static final int decryption_completed=0x7f060012;
+        public static final int decryption_error=0x7f060010;
+        public static final int decryption_error_details=0x7f06000f;
+        public static final int notification_details_text=0x7f060004;
+        public static final int notification_details_title=0x7f060003;
+        public static final int notification_details_title_decryption=0x7f060006;
+        public static final int notification_details_title_encryption=0x7f060005;
+        public static final int notification_title_decryption=0x7f060002;
+        public static final int notification_title_encryption=0x7f060001;
+        public static final int password_hint=0x7f06000c;
+        public static final int prefs_delete_encrypted=0x7f060015;
+        public static final int prefs_delete_encrypted_details=0x7f060016;
+        public static final int prefs_delete_plain=0x7f060013;
+        public static final int prefs_delete_plain_details=0x7f060014;
+        public static final int prefs_generating=0x7f06001f;
+        public static final int prefs_regenerate=0x7f060018;
+        public static final int prefs_regenerate_completed=0x7f060019;
+        public static final int prefs_regenerate_failed=0x7f06001a;
+        public static final int prefs_regenerate_keys=0x7f060017;
+        public static final int prefs_regenerate_keys_alert=0x7f060021;
+        public static final int prefs_regenerate_keys_details=0x7f060020;
+        public static final int prefs_regenerate_password=0x7f06001b;
+        public static final int prefs_regenerate_password_confirm=0x7f06001d;
+        public static final int prefs_regenerate_password_confirm_error=0x7f06001e;
+        public static final int prefs_regenerate_password_error=0x7f06001c;
+        public static final int unlock=0x7f06000a;
+        public static final int unlock_error=0x7f06000b;
+        public static final int unlock_file_error=0x7f06000d;
+        public static final int unlock_info=0x7f060008;
+        public static final int unlock_title=0x7f060009;
     }
     public static final class xml {
         public static final int preferences=0x7f040000;
