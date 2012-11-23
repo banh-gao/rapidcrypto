@@ -12,7 +12,7 @@ import android.net.Uri;
 import android.os.IBinder;
 import android.util.Log;
 
-public class EncryptionService extends Service {
+public class CryptoService extends Service {
 
 	public static final String ACTION_ENCRYPT = "net.sf.oneWayCrypto.action.ENCRYPT";
 	public static final String ACTION_ENCRYPT_FAILED = "net.sf.oneWayCrypto.action.ENCRYPT_FAILED";
@@ -76,7 +76,7 @@ public class EncryptionService extends Service {
 			if (true)
 				return Uri.fromFile(new File("testEncryptedFileUri"));
 
-			int rawContactId = startIntent.getIntExtra(EncryptionService.EXTRA_RAW_CONTACT_ID, 0);
+			int rawContactId = startIntent.getIntExtra(CryptoService.EXTRA_RAW_CONTACT_ID, 0);
 			if (rawContactId == 0)
 				throw new Exception("Invalid raw contact id " + rawContactId);
 
@@ -104,13 +104,13 @@ public class EncryptionService extends Service {
 		}
 
 		private void broadcastFailure() {
-			Intent outcome = new Intent(EncryptionService.ACTION_ENCRYPT_FAILED);
+			Intent outcome = new Intent(CryptoService.ACTION_ENCRYPT_FAILED);
 			outcome.setData(data);
 			getApplicationContext().sendBroadcast(outcome);
 		}
 
 		private void broadcastCompletion(Uri encryptedData) {
-			Intent outcome = new Intent(EncryptionService.ACTION_ENCRYPT_COMPLETED);
+			Intent outcome = new Intent(CryptoService.ACTION_ENCRYPT_COMPLETED);
 			outcome.setData(encryptedData);
 			getApplicationContext().sendBroadcast(outcome);
 		}

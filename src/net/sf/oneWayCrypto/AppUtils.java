@@ -11,13 +11,14 @@ import android.preference.PreferenceManager;
  */
 public class AppUtils extends Application {
 
-	public static String PACKAGE_NAME;
-
+	private static final int DB_VERSION = 1;
 	public static final String PREFS_KEY_STRENGTH = "key_strength";
 
-	private static Context context;
+	public static String PACKAGE_NAME;
 
+	private static Context context;
 	private static ContactsCryptoManager contactsCryptoManager;
+	private static DBHelper dbHelper;
 
 	@Override
 	public void onCreate() {
@@ -25,6 +26,7 @@ public class AppUtils extends Application {
 		PACKAGE_NAME = getPackageName();
 		context = getApplicationContext();
 		contactsCryptoManager = new ContactsCryptoManager(context);
+		dbHelper = new DBHelper(context, DB_VERSION);
 	}
 
 	public static SharedPreferences getPrefs() {
@@ -42,5 +44,9 @@ public class AppUtils extends Application {
 
 	public static ContactsCryptoManager getContactsCryptoManager() {
 		return contactsCryptoManager;
+	}
+
+	public static DBHelper getDatabase() {
+		return dbHelper;
 	}
 }

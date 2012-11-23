@@ -7,8 +7,8 @@ import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
-import android.content.Intent;
 import android.net.Uri;
+import android.support.v4.app.NotificationCompat;
 
 public class EncryptNotificationUpdater {
 
@@ -34,27 +34,24 @@ public class EncryptNotificationUpdater {
 
 	public EncryptNotificationUpdater(Context context, boolean isEncryption) {
 		this.context = context;
-		Intent resultIntent = new Intent(context, MainActivity.class);
 		if (isEncryption) {
 			title = context.getResources().getString(R.string.notification_title_encryption);
 			bigTitle = context.getResources().getString(R.string.notification_details_title_encryption);
 			notificationId = 1;
-			resultIntent.setAction(MainActivity.ACTION_SHOW_ENCRYPTION);
 		} else {
 			title = context.getResources().getString(R.string.notification_title_decryption);
 			bigTitle = context.getResources().getString(R.string.notification_details_title_decryption);
 			notificationId = 2;
-			resultIntent.setAction(MainActivity.ACTION_SHOW_DECRYPTION);
 		}
 
-		resultPendingIntent = PendingIntent.getActivity(context, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+		resultPendingIntent = PendingIntent.getActivity(context, 0, null, PendingIntent.FLAG_UPDATE_CURRENT);
 
 		notifMgr = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 		notification = buildNotification(context);
 	}
 
 	private Notification buildNotification(Context context) {
-		Notification.Builder b = new Notification.Builder(context);
+		NotificationCompat.Builder b = new NotificationCompat.Builder(context);
 		b.setSmallIcon(android.R.drawable.ic_lock_lock);
 		b.setContentIntent(resultPendingIntent);
 		b.setContentTitle(title);
@@ -69,7 +66,7 @@ public class EncryptNotificationUpdater {
 			return b.build();
 		}
 
-		Notification.InboxStyle inboxStyle = new Notification.InboxStyle();
+		NotificationCompat.InboxStyle inboxStyle = new NotificationCompat.InboxStyle();
 		inboxStyle.setBigContentTitle(bigTitle);
 		int completed = 0;
 		for (Entry<Uri, Integer> e : progresses.entrySet()) {

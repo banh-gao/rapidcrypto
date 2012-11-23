@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">One Way Crypto</string>
     <string name="menu_settings">Settings</string>
-    <string name="tab_encryption">Encryption</string>
-    <string name="tab_decryption">Decryption</string>
+    <string name="permission_encrypt_label">File encryption and decryption</string>
+    <string name="permission_encrypt_description">Allow an application to use the encryption service to encrypt and decrypt files</string>
     <string name="notification_title_encryption">File encryption</string>
     <string name="notification_title_decryption">File decryption</string>
 
@@ -16,6 +17,7 @@
     <string name="notification_details_text">%1$s: %2$d%%</string>
     <string name="notification_details_title_encryption">Encryption status:</string>
     <string name="notification_details_title_decryption">Decryption status:</string>
+    <string name="notification_decryption_requested">File decryption requested</string>
     <string name="cancel">Cancel</string>
     <string name="unlock_info">Insert the password in order to decrypt the file</string>
     <string name="unlock_title">Decrypt file</string>
